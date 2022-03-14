@@ -1,0 +1,31 @@
+body{
+    line-height:200%;
+    font-size: 120%;
+}
+
+a{
+    color:lime;
+    text-decoration:none;
+}
+
+ul.links{
+    list-style:none;
+    padding-left:0;
+}
+ul.links img{
+    width:40px;
+    margin-right:10px;
+    position:relative;
+    top:10px;
+}
+
+
+.header{
+    padding:5px;
+}
+.URL{
+    padding:5px;
+}
+.introduction{
+    padding:5px;
+}
