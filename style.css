@@ -8,8 +8,17 @@ a{
     text-decoration:none;
 }
 
-hr{
-    padding:0px;
+ul{
+    padding-bottom:10px;
+    margin-bottom:5px;
+    list-style:none;
+    padding-left:0;
+    border:2px white;
+}
+
+ul img{
+    width:40px;
+    margin-right:10px;
 }
 
 table{
@@ -17,25 +26,12 @@ table{
     border-collapse: collapse;
 }
 th,td{
-    padding:10px 10px;
+    padding:10px 10px 10px 10px;
     border:solid 1px #fff;
 }
-table img{
-    width:40px;
-    margin-right:10px;
-    position:relative;
-    top:10px;
-}
-
 
 .header{
-    padding:5px;
-}
-.URL{
-    padding:5px;
-}
-.introduction{
-    padding:5px;
+    padding:1px;
 }
 .text-center{
     text-align:center;
