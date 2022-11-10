@@ -4,8 +4,7 @@ body{
 }
 
 a{
-    color:lime;
-    text-decoration:none;
+    color:black;
 }
 
 ul{
@@ -13,8 +12,7 @@ ul{
     margin-bottom:5px;
     list-style:none;
     padding-left:0;
-    border:2px white;
-}
+    border:2px black}
 
 ul img{
     width:40px;
@@ -27,12 +25,17 @@ table{
 }
 th,td{
     padding:10px 10px 10px 10px;
-    border:solid 1px #fff;
+    border:solid 1px black;
 }
 
 .header{
     padding:1px;
+    text-decoration:none;
 }
 .text-center{
     text-align:center;
+}
+
+.header a {
+    text-decoration: none;
 }
