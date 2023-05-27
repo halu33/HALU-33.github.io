@@ -19,7 +19,7 @@ a{
 .header{
     text-align:center;
     padding:1rem;
-    background-color: #F0FFF0;
+    background-color: #f8f8f8;
 }
 
 .header a {
@@ -27,29 +27,40 @@ a{
     color: #333;
 }
 
-.sns{
+.sns {
     display: flex;
-    justify-content: space-around; /* 画像を横に間隔を均等に並べる */
-    padding: 20px 0; /* 上下にパディングを追加 */
+    justify-content: space-around;
+    padding: 20px 0;
 }
 
-.sns a{
+.sns a {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.sns .sns-name{
-    margin-bottom: 10px; /* 名前と画像の間にマージンを追加 */
-    font-size: 14px;
-    color: #333;
+    color: inherit;
     text-align: center;
-    background-color: #E6E6FA;
+    flex-basis: 25%; /* 要素を均等に分割するために追加 */
 }
 
-.sns img{
-    width:60px;
-    height: 60px;
+.sns i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sns i.fa-twitter {
+    color: #1da1f2;
+}
+
+.sns i.fa-discord {
+    color: #5865f2;
+}
+
+.sns i.fa-youtube {
+    color: #ff0000;
+}
+
+.sns i.fa-spotify {
+    color: #1db954;
 }
 
 
@@ -117,20 +128,30 @@ a{
     margin-bottom: 1em;
 }
 
-.details-header {
+.details-section {
+    margin-top: 10px;
+  }
+
+  .details-header {
     cursor: pointer;
     background-color: #f8f8f8;
     padding: 10px;
-    margin-top: 10px; /* 他のセクションとの間のマージンを10pxに変更 */
+    margin-top: 10px;
     border-top: 2px solid #ddd;
     border-bottom: 1px solid #ddd;
     text-align: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.details-content {
+  .details-header i {
+    margin: 0 5px; /* アイコンの左右のマージンを調整 */
+  }
+
+  .details-content {
     display: none;
     background-color: #fff;
     padding: 15px;
-    padding-top:0.5px;
     border-bottom: 2px solid #ddd;
-}
+  }

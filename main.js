@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const detailsHeader = document.querySelector(".details-header");
-    const detailsContent = document.querySelector(".details-content");
+    const detailsHeader = document.querySelector("#detailsHeader");
+    const detailsContent = document.querySelector("#detailsContent");
 
     detailsHeader.addEventListener("click", function() {
         const display = detailsContent.style.display;
