@@ -31,6 +31,13 @@ a{
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .sns a {
@@ -39,12 +46,20 @@ a{
     align-items: center;
     color: inherit;
     text-align: center;
-    flex-basis: 25%; /* 要素を均等に分割するために追加 */
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
 }
 
 .sns i {
     font-size: 2em;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sns a:hover i {
+    transform: scale(0.9);
 }
 
 .sns i.fa-twitter {
@@ -62,6 +77,7 @@ a{
 .sns i.fa-spotify {
     color: #1db954;
 }
+
 
 
 .into {
@@ -94,22 +110,21 @@ a{
 
 
 .into {
-    padding: 0px;
-    padding-top:0px;
-    padding-left:15px;
-    padding-right:15px;
-    padding-bottom:15px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
 }
 
 .intos {
-    padding: 0px;
+    padding: 0;
 }
 
 .accordion-button {
     background-color: transparent;
     color: black;
     cursor: pointer;
-    padding: 1em 1em;
+    padding: 1em;
     width: 100%;
     text-align: left;
     border: none;
@@ -122,7 +137,6 @@ a{
 }
 
 .accordion-body {
-    padding-top: 0.1em;
     padding: 1em;
     background-color: #fff;
     margin-bottom: 1em;
@@ -130,9 +144,9 @@ a{
 
 .details-section {
     margin-top: 10px;
-  }
+}
 
-  .details-header {
+.details-header {
     cursor: pointer;
     background-color: #f8f8f8;
     padding: 10px;
@@ -143,15 +157,15 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .details-header i {
+.details-header i {
     margin: 0 5px; /* アイコンの左右のマージンを調整 */
-  }
+}
 
-  .details-content {
+.details-content {
     display: none;
     background-color: #fff;
     padding: 15px;
     border-bottom: 2px solid #ddd;
-  }
+}
