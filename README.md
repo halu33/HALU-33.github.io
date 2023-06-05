@@ -16,7 +16,7 @@ main.js
 
 index.htmlは、このプロフィールページのメインとなるHTMLファイルです。HTMLは、Webページの構造を定義するためのマークアップ言語です。このファイルでは、Webページのヘッダー、本文、フッターなどの基本的な構造を定義しています。
 
-### <head>
+### head
   
 <meta name="viewport" content="width=device-width, initial-scale=1">: このメタタグは、ビューポートの幅をデバイスの幅に設定し、初期のズームレベルを1に設定します。これは、レスポンシブデザインを実現するために重要です。
   
@@ -27,7 +27,7 @@ index.htmlは、このプロフィールページのメインとなるHTMLファ
 <title>@HALU_33</title>: このタグは、ウェブページのタイトルを設定します。これは、ブラウザのタブに表示され、検索エンジン結果ページにも表示されます。
   
 
-### <body>
+### body
   
 <i class="fab fa-twitter"></i>: このiタグは、Font AwesomeのTwitterアイコンを表示します。
   
