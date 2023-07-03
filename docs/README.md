@@ -1,4 +1,4 @@
-# HALU-33.github.io
+# halu33.github.io
 
 このREADMEは、HTML、CSS、JavaScriptの学習の一環として作成したプロフィールページの技術メモとして、備忘録の役割を果たしています。
 
@@ -15,17 +15,17 @@
 ### head
 
 - `<meta name="viewport" content="width=device-width, initial-scale=1">`: このメタタグは、ビューポートの幅をデバイスの幅に設定し、初期のズームレベルを1に設定します。これは、レスポンシブデザインを実現するために重要です。
-  
+
 - `<meta name="description" content="@HALU_33のプロフィールページ。">`: このメタタグは、ウェブページの説明を提供します。これは、検索エンジンの結果ページに表示されることがあります。
-  
+
 - `<link rel="stylesheet" href="./style.css"/>`: このリンクタグは、外部CSSファイル（この場合はstyle.css）をHTML文書にリンクします。
-  
+
 - `<title>@HALU_33</title>`: このタグは、ウェブページのタイトルを設定します。これは、ブラウザのタブに表示され、検索エンジン結果ページにも表示されます。
 
 ### body
 
 - `<i class="fab fa-twitter"></i>`: このiタグは、Font AwesomeのTwitterアイコンを表示します。
-  
+
 - `<script src="./main.js"></script>`: このスクリプトタグは、外部JavaScriptファイル（この場合はmain.js）をHTML文書にリンクします。
 
 ## style.css
