@@ -1,6 +1,6 @@
 # halu33.github.io
 
-このREADMEは、HTML、CSS、JavaScriptの学習の一環として作成したプロフィールページの技術メモとして、備忘録の役割を果たしています。
+HTML、CSS、JavaScriptの学習の一環として作成したプロフィールページの技術メモ。
 
 ## 目次
 
