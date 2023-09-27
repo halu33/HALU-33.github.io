@@ -1,14 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const detailsHeader = document.querySelector("#detailsHeader");
-    const detailsContent = document.querySelector("#detailsContent");
+const darkModeToggle = document.querySelector("#darkModeToggle");
 
-    detailsHeader.addEventListener("click", function() {
-        const display = detailsContent.style.display;
+// ユーザーの端末のダークモード設定をチェック
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // ユーザーの端末がダークモードに設定されている場合
+    document.body.classList.add("dark-mode");
+    darkModeToggle.checked = true;
+}
 
-        if (display === "none") {
-            detailsContent.style.display = "block";
-        } else {
-            detailsContent.style.display = "none";
-        }
-    });
+darkModeToggle.addEventListener("change", function() {
+    if (this.checked) {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
 });
