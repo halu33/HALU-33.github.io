@@ -1,12 +1,13 @@
 <?php
-include "./src/php/counter.php"
+include "./src/php/counter.php";
+include "./src/php/Spotify.php";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="@HALU_33のプロフィールページ。">
+        <meta name="description" content="HALU_33のプロフィールページ。">
         <link rel="stylesheet" href="./src/css/style.css"/>
         <title>@HALU_33</title>
         <link rel="icon" href="./img/epril_icon.png">
@@ -15,8 +16,8 @@ include "./src/php/counter.php"
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-lyuxz5v+9Wf7TXzK7+cJRRkjxuX9+kFOR3mU06x+y/q6w3B8v4F8FbkUVOGV4FsF4dBeP2Q4TbQn3BvIF1Cx0g==" crossorigin="anonymous" />
     </head>
 
-    <body>
 
+    <body>
         <div class="header">
             <label class="toggle-switch">
                 <input type="checkbox" id="darkModeToggle">
@@ -24,6 +25,7 @@ include "./src/php/counter.php"
             </label>
             <h1><strong><a href="https://halu33.net">@HALU_33</a></strong></h1>
         </div>
+
 
         <div class="sns">
             <a href="https://twitter.com/HALU_33" target="_blank">
@@ -47,6 +49,7 @@ include "./src/php/counter.php"
                 <div class="sns-name">halu33</div>
             </a>
         </div>
+
 
         <div class="details-section">
             <div class="details-content">
@@ -91,6 +94,32 @@ include "./src/php/counter.php"
             </div>
         </div>
 
+
+        <!-- Spotifyの再生情報 -->
+        <?php if ($spotifyInfo): ?>
+            <div class="details-section">
+                <div class="details-content">
+                    <table class="detail-table">
+                        <tr>
+                            <th>再生中の楽曲</th>
+                            <td><?php echo $spotifyInfo['trackName']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>アーティスト</th>
+                            <td><?php echo $spotifyInfo['artistName']; ?></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <img src="<?php echo $spotifyInfo['albumCover']; ?>" alt="アルバムカバー" width="200">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        <?php endif; ?>
+
+
+        <!-- アクセスカウンター -->
         <div class="visitor-count">
             訪問者数: <?php echo $total_visitor_count; ?> 人
         </div>

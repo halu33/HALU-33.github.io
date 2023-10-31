@@ -1,3 +1,5 @@
 src/php/config.php
 
 .htaccess
+
+/vendor/

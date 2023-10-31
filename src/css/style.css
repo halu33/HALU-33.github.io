@@ -210,10 +210,6 @@ body.dark-mode .header h1 a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.visitor-count:hover {
-    background-color: #ddd;
-}
-
 body.dark-mode .visitor-count {
     background-color: #555;
     color: #f5f5f5;
