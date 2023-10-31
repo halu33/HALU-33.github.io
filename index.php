@@ -1,3 +1,6 @@
+<?php
+include "./src/php/counter.php"
+?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -50,7 +53,7 @@
                 <table class="detail-table">
                     <tr>
                         <th>名前</th>
-                        <td>halu (呼び方なんでも)</td>
+                        <td>halu</td>
                     </tr>
                     <tr>
                         <th>生年月日</th>
@@ -87,6 +90,11 @@
                 </table>
             </div>
         </div>
+
+        <div class="visitor-count">
+            訪問者数: <?php echo $total_visitor_count; ?> 人
+        </div>
+
 
     <script src="./src/js/main.js"></script>
     </body>
