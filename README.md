@@ -1,5 +1,5 @@
-# halu33.github.io
+# halu33.net
 
-- HTML、CSS、JavaScriptでプロフィールを作ってみたもの。
+- HTML、CSS、JavaScript、PHP(MuSQL)でプロフィールを作ってみたもの。
 
-- https://halu33.net
+- https://halu33.net/info
