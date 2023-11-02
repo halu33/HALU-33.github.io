@@ -1,5 +1,4 @@
 src/php/config.php
 
 .htaccess
-
-/vendor/
+.htaccess.bak

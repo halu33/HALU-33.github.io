@@ -1,6 +1,5 @@
 <?php
 include "./src/php/counter.php";
-include "./src/php/Spotify.php";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -95,34 +94,13 @@ include "./src/php/Spotify.php";
         </div>
 
 
-        <!-- Spotifyの再生情報 -->
-        <?php if ($spotifyInfo): ?>
-            <div class="details-section">
-                <div class="details-content">
-                    <table class="detail-table">
-                        <tr>
-                            <th>再生中の楽曲</th>
-                            <td><?php echo $spotifyInfo['trackName']; ?></td>
-                        </tr>
-                        <tr>
-                            <th>アーティスト</th>
-                            <td><?php echo $spotifyInfo['artistName']; ?></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <img src="<?php echo $spotifyInfo['albumCover']; ?>" alt="アルバムカバー" width="200">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        <?php endif; ?>
-
-
         <!-- アクセスカウンター -->
-        <div class="visitor-count">
-            訪問者数: <?php echo $total_visitor_count; ?> 人
+        <div class="counter-container">
+            <div class="visitor-count">
+                訪問者数: <?php echo $total_visitor_count; ?> 人
+            </div>
         </div>
+
 
 
     <script src="./src/js/main.js"></script>
