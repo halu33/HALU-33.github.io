@@ -6,7 +6,11 @@ include "./src/php/counter.php";
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="HALU_33のプロフィールページ。">
+        <meta name="description" content="HALU_33のプロフィール">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://halu33.net/">
+        <meta property="og:site_name" content="HALU_33のプロフィール">
+        <meta property="og:locale" content="ja_JP">
         <link rel="stylesheet" href="./src/css/style.css"/>
         <title>@HALU_33</title>
         <link rel="icon" href="./img/epril_icon.png">
@@ -48,6 +52,7 @@ include "./src/php/counter.php";
                 <div class="sns-name">halu33</div>
             </a>
         </div>
+
 
 
         <div class="details-section">
@@ -97,9 +102,10 @@ include "./src/php/counter.php";
         <!-- アクセスカウンター -->
         <div class="counter-container">
             <div class="visitor-count">
-                訪問者数: <?php echo $total_visitor_count; ?> 人
+                <?php echo str_pad($total_visitor_count, 8, '0', STR_PAD_LEFT); ?>
             </div>
         </div>
+
 
 
 
