@@ -9,7 +9,6 @@ include "./src/php/counter.php";
         <meta name="description" content="HALU_33のプロフィール">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://halu33.net/">
-        <meta property="og:site_name" content="HALU_33のプロフィール">
         <meta property="og:locale" content="ja_JP">
         <link rel="stylesheet" href="./src/css/style.css"/>
         <title>@HALU_33</title>
@@ -21,6 +20,7 @@ include "./src/php/counter.php";
 
 
     <body>
+        <!-- ヘッダー -->
         <div class="header">
             <label class="toggle-switch">
                 <input type="checkbox" id="darkModeToggle">
@@ -30,6 +30,7 @@ include "./src/php/counter.php";
         </div>
 
 
+        <!-- SNS -->
         <div class="sns">
             <a href="https://twitter.com/HALU_33" target="_blank">
                 <i class="fab fa-twitter"></i>
@@ -54,61 +55,55 @@ include "./src/php/counter.php";
         </div>
 
 
-
-        <div class="details-section">
-            <div class="details-content">
-                <table class="detail-table">
-                    <tr>
-                        <th>名前</th>
-                        <td>halu</td>
-                    </tr>
-                    <tr>
-                        <th>生年月日</th>
-                        <td>2005/03/03</td>
-                    </tr>
-                    <tr>
-                        <th>所在地</th>
-                        <td>日本 三重</td>
-                    </tr>
-                    <tr>
-                        <th>学校</th>
-                        <td>どこかの高専 kosen20s</td>
-                    </tr>
-                    <tr>
-                        <th>サブ垢</th>
-                        <td>公開垢<a href="https://twitter.com/MK8DX_mkmg" target="_blank">@MK8DX_mkmg</a> 野球垢<a href="https://twitter.com/Nyi516569" target="_blank">@Nyi516569</a></td>
-                    </tr>
-                    <tr>
-                        <th>MK8DX</th>
-                        <td>所属:elf Code RL<br>
-                            150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">Villeta</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>白猫プロジェクト</th>
-                        <td>Name: 33<i class="fa-brands fa-apple"></i> Rank: 650↑ 段位: 25↑ 21年4月頃～<br>
-                            推しキャラ: ヴィレータ、エプリル
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>ユメステ</th>
-                        <td>親指勢 23年7月～<br> 推し: 新妻八恵、流石知冴、白丸美兎 <br> StellaFC: 40↑</td>
-                    </tr>
-                </table>
-            </div>
+        <!-- 詳細情報部分 -->
+        <div class="info">
+            <table class="info-table">
+                <tr>
+                    <th>名前</th>
+                    <td>halu</td>
+                </tr>
+                <tr>
+                    <th>生年月日</th>
+                    <td>2005/03/03</td>
+                </tr>
+                <tr>
+                    <th>所在地</th>
+                    <td>日本 三重</td>
+                </tr>
+                <tr>
+                    <th>学校</th>
+                    <td>どこかの高専 kosen20s</td>
+                </tr>
+                <tr>
+                    <th>サブ垢</th>
+                    <td>公開垢<a href="https://twitter.com/MK8DX_mkmg" target="_blank">@MK8DX_mkmg</a> 野球垢<a href="https://twitter.com/Nyi516569" target="_blank">@Nyi516569</a></td>
+                </tr>
+                <tr>
+                    <th>MK8DX</th>
+                    <td>所属:elf Code RL<br>
+                        150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">Villeta</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>白猫プロジェクト</th>
+                    <td>Name: 33<i class="fa-brands fa-apple"></i> Rank: 650↑ 段位: 25↑ 21年4月頃～<br>
+                        推しキャラ: ヴィレータ、エプリル
+                    </td>
+                </tr>
+                <tr>
+                    <th>ユメステ</th>
+                    <td>親指勢 23年7月～<br> 推し: 新妻八恵、流石知冴、白丸美兎 <br> StellaFC: 40↑</td>
+                </tr>
+            </table>
         </div>
 
 
         <!-- アクセスカウンター -->
-        <div class="counter-container">
-            <div class="visitor-count">
-                <?php echo str_pad($total_visitor_count, 8, '0', STR_PAD_LEFT); ?>
-            </div>
+        <div class="access-counter">
+            <?php echo str_pad($total_visitor_count, 8, '0', STR_PAD_LEFT); ?>
         </div>
 
 
-
-
-    <script src="./src/js/main.js"></script>
+        <script src="./src/js/main.js"></script>
     </body>
 </html>

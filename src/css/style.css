@@ -4,6 +4,8 @@
     }
 }
 
+
+/* 共通スタイル */
 body {
     line-height: 200%;
     font-size: 120%;
@@ -19,7 +21,7 @@ a {
 .header {
     text-align: center;
     padding: 1rem;
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
 }
 
 .header a {
@@ -28,7 +30,7 @@ a {
 }
 
 .header .toggle-switch {
-    position: absolute;
+    float: right;
     top: 10px;
     right: 10px;
 }
@@ -81,11 +83,10 @@ input:checked + .slider:before {
 .sns {
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
-    background-color: #f8f8f8;
+    padding: 20px;
+    background-color: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     flex-wrap: wrap;
     max-width: 100%;
@@ -129,92 +130,117 @@ input:checked + .slider:before {
     color: #1db954;
 }
 
-.details-section {
+.sns i.fa-github {
+    color: #333;
+}
+
+.info {
     margin-top: 10px;
-    background-color: #f5f5f5;
-}
-
-.details-content {
-    background-color: #f5f5f5;
     padding: 15px;
-    border-bottom: 2px solid #ddd;
 }
 
-.detail-table {
+.info-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.detail-table th, .detail-table td {
+.info-table th, .info-table td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
-.detail-table th {
-    background-color: #f5f5f5;
+.info-table th {
     text-align: left;
+    background-color: #f5f5f5;
 }
 
-.detail-table tr:last-child th, .detail-table tr:last-child td {
+.info-table tr:last-child th, .info-table tr:last-child td {
     border-bottom: none;
 }
 
-/* ダークモードの設定 */
-body.dark-mode {
-    background-color: #333;
+
+/* ダークモード */
+body.dark-mode, .header.dark-mode, .sns.dark-mode, .info.dark-mode, .access-counter.dark-mode {
+    background-color: #222222;
     color: #f5f5f5;
 }
 
-.dark-mode .header, .dark-mode .sns, .dark-mode .details-section {
-    background-color: #444;
+body.dark-mode a {
+    color: #66cdaa;
 }
 
-body.dark-mode .details-section, body.dark-mode .detail-table th {
-    background-color: #444;
+.dark-mode .header {
+    background-color: #222222;
 }
 
-body.dark-mode .detail-table td, body.dark-mode .detail-table th {
+.dark-mode .header a {
+    color: white
+}
+
+.dark-mode .sns {
+    background-color: #222222;
     border-color: #555;
 }
 
-body.dark-mode .detail-table tr:last-child th, body.dark-mode .detail-table tr:last-child td {
-    border-bottom-color: transparent;
+.dark-mode .sns a {
+    color: #f5f5f5;
 }
 
-body.dark-mode .details-content {
-    background-color: #444;
+.dark-mode .sns i.fa-twitter {
+    color: #1da1f2;
+}
+
+.dark-mode .sns i.fa-discord {
+    color: #5865f2;
+}
+
+.dark-mode .sns i.fa-youtube {
+    color: #ff0000;
+}
+
+.dark-mode .sns i.fa-spotify {
+    color: #1db954;
+}
+
+.dark-mode .sns i.fa-github {
+    color: #f5f5f5;
+}
+
+.dark-mode .info {
+    background-color: #222222;
     border-color: #555;
 }
 
-body.dark-mode .detail-table td {
-    background-color: #444;
-    color: #f5f5f5;
+.dark-mode .info-table {
+    border-color: #555;
 }
 
-body.dark-mode .header h1 a {
-    color: #f5f5f5;
+.dark-mode .info-table th, .dark-mode .info-table td {
+    border-color: #555;
+}
+
+.dark-mode .info-table th {
+    background-color: #222222;
 }
 
 
 /* アクセスカウンター */
-.visitor-count {
+.access-counter {
     margin-top: 20px;
+    margin: 0 0 0 auto;
     padding: 0.4em;
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
     color: #333;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 1.2em;
     font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
     width: fit-content;
 }
 
-body.dark-mode .visitor-count {
-    background-color: #555;
+.dark-mode .access-counter {
+    background-color: #222222;
     color: #f5f5f5;
-}
-
-.counter-container {
-    display: flex;
-    justify-content: flex-end;
 }
