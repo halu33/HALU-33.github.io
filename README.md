@@ -1,5 +1,3 @@
-# halu33.net
+# https://halu33.net
 
-- HTML、CSS、JavaScript、PHP(MySQL)でプロフィールを作ってみたもの。
-
-- https://halu33.net
+## 私のプロフィール

@@ -15,7 +15,6 @@ include "./src/php/counter.php";
         <link rel="icon" href="./img/epril_icon.png">
         <link rel="apple-touch-icon" sizes="180x180" href="./img/epril_icon.png">
         <script src="https://kit.fontawesome.com/820bccf440.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-lyuxz5v+9Wf7TXzK7+cJRRkjxuX9+kFOR3mU06x+y/q6w3B8v4F8FbkUVOGV4FsF4dBeP2Q4TbQn3BvIF1Cx0g==" crossorigin="anonymous" />
     </head>
 
 
@@ -89,7 +88,7 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>MK8DX</th>
-                    <td>所属:elf Code RL<br>
+                    <td>所属:elf Code Frp RL<br>
                         150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">Villeta</a>
                     </td>
                 </tr>
@@ -101,9 +100,20 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>ユメステ</th>
-                    <td>親指勢 23年7月～<br> 推し: 新妻八恵、流石知冴、白丸美兎 <br> StellaFC: 40↑</td>
+                    <td>親指勢 23年7月～<br> 推し: 新妻八恵、流石知冴、白丸美兎 <br> StellaFC: 50↑</td>
                 </tr>
             </table>
+        </div>
+
+
+        <!-- NowPlaying -->
+        <div id="now-playing-container">
+            <div id="now-playing-header">
+                <i class="fab fa-spotify"></i> Now Playing <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div id="track-info">
+                <!-- NowPlaying.jsによって出力 -->
+            </div>
         </div>
 
 
@@ -113,6 +123,8 @@ include "./src/php/counter.php";
         </div>
 
 
-        <script src="./src/js/main.js"></script>
+        <script src="./src/js/ModeSwitch.js"></script>
+        <script src="./src/js/NowPlaying.js"></script>
+        <script src="./src/js/counter.js"></script>
     </body>
 </html>

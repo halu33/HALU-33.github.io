@@ -220,3 +220,68 @@ body.dark-mode a {
     background-color: #222222;
     color: #f5f5f5;
 }
+
+
+/* Now Playing */
+#now-playing-container {
+    text-align: center;
+}
+
+#now-playing-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#track-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.album-art {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+.track-name, .artist-name, .track-length {
+    margin-right: 10px;
+}
+
+.track-name {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.artist-name, .track-length {
+    font-size: 0.9em;
+    color: #555;
+}
+
+#track-info a {
+    color: #3cb371;
+    text-decoration: none;
+}
+
+#track-info a:hover {
+    text-decoration: underline;
+}
+
+.fa-spotify, .fa-headphones {
+    margin-right: 5px;
+}
+
+.dark-mode #track-info a {
+    color: #66cdaa;
+}
+
+.dark-mode .track-name, .dark-mode .artist-name, .dark-mode .track-length {
+    color: #f5f5f5;
+}
+
+.dark-mode .fa-spotify, .dark-mode .fa-headphones {
+    color: #f5f5f5;
+}
