@@ -20,12 +20,21 @@ include "./src/php/counter.php";
 
 
     <body>
+        <!-- モード切り替えボタン -->
+        <div class="switch-button">
+            <!-- ライトモード切り替えボタン -->
+            <button id="lightModeButton" class="mode-button">
+                <i class="fa-regular fa-sun"></i>
+            </button>
+            <!-- ダークモード切り替えボタン -->
+            <button id="darkModeButton" class="mode-button">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+
         <!-- ヘッダー -->
         <div class="header">
-            <label class="toggle-switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider"></span>
-            </label>
             <h1><strong><a href="https://halu33.net">@HALU_33</a></strong></h1>
         </div>
 
