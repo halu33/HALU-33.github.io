@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const trackInfoContainer = document.getElementById('track-info');
 
     function fetchNowPlaying() {
-        fetch('src/php/Spotify.php')
+        fetch('src/php/Spotify.php?type=json')
             .then(response => response.json())
             .then(data => {
                 if (data && data.item) {

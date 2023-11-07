@@ -125,6 +125,5 @@ include "./src/php/counter.php";
 
         <script src="./src/js/ModeSwitch.js"></script>
         <script src="./src/js/NowPlaying.js"></script>
-        <script src="./src/js/counter.js"></script>
     </body>
 </html>
