@@ -100,7 +100,7 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>ユメステ</th>
-                    <td>親指勢 23年7月～<br> 推し: 新妻八恵、流石知冴、白丸美兎 <br> StellaFC: 50↑</td>
+                    <td>親指勢 23年7月～ レート930↑ 星章30%↑ <br> 推し: 新妻八恵、流石知冴、白丸美兎</td>
                 </tr>
             </table>
         </div>
