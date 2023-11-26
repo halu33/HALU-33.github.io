@@ -89,7 +89,7 @@ include "./src/php/counter.php";
                 <tr>
                     <th>MK8DX</th>
                     <td>所属:elf Code Frp RL<br>
-                        150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">Villeta</a>
+                        150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">SenjuIroha</a>
                     </td>
                 </tr>
                 <tr>
@@ -100,7 +100,7 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>ユメステ</th>
-                    <td>親指勢 23年7月～ レート930↑ 星章30%↑ <br> 推し: 新妻八恵、流石知冴、白丸美兎</td>
+                    <td>親指勢 23年7月～ レート940↑ 星章30%↑ <br> 推し: 新妻八恵、流石知冴、千寿いろは、白丸美兎</td>
                 </tr>
             </table>
         </div>
