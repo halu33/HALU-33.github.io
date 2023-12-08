@@ -44,9 +44,9 @@ include "./src/php/counter.php";
                 <i class="fab fa-twitter"></i>
                 <div class="sns-name">@HALU_33</div>
             </a>
-            <a href="https://discord.com/channels/@me" target="_blank">
+            <a href="https://discord.gg/UQMnbP85PB" target="_blank">
                 <i class="fab fa-discord"></i>
-                <div class="sns-name">HALU_33#3333</div>
+                <div class="sns-name">HALU_33個人鯖</div>
             </a>
             <a href="https://www.youtube.com/c/HALU_33" target="_blank">
                 <i class="fab fa-youtube"></i>
