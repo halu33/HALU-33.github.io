@@ -46,7 +46,7 @@ include "./src/php/counter.php";
             </a>
             <a href="https://discord.gg/UQMnbP85PB" target="_blank">
                 <i class="fab fa-discord"></i>
-                <div class="sns-name">HALU_33個人鯖</div>
+                <div class="sns-name">個人鯖</div>
             </a>
             <a href="https://www.youtube.com/c/HALU_33" target="_blank">
                 <i class="fab fa-youtube"></i>
@@ -88,7 +88,7 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>MK8DX</th>
-                    <td>所属:elf Code Frp RL<br>
+                    <td>所属:Code RL ill Iruca その他化石チーム<br>
                         150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">SenjuIroha</a>
                     </td>
                 </tr>
