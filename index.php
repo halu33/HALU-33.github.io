@@ -83,24 +83,20 @@ include "./src/php/counter.php";
                     <td>どこかの高専 kosen20s</td>
                 </tr>
                 <tr>
-                    <th>サブ垢</th>
-                    <td>公開垢<a href="https://twitter.com/MK8DX_mkmg" target="_blank">@MK8DX_mkmg</a> 野球垢<a href="https://twitter.com/Nyi516569" target="_blank">@Nyi516569</a></td>
-                </tr>
-                <tr>
-                    <th>MK8DX</th>
+                    <th>MK8DX(故)</th>
                     <td>所属:Code RL ill Iruca その他化石チーム<br>
                         150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">SenjuIroha</a>
                     </td>
                 </tr>
                 <tr>
-                    <th>白猫プロジェクト</th>
+                    <th>白猫プロジェクト(故)</th>
                     <td>Name: 33<i class="fa-brands fa-apple"></i> Rank: 650↑ 段位: 25↑ 21年4月頃～<br>
                         推しキャラ: ヴィレータ、エプリル
                     </td>
                 </tr>
                 <tr>
                     <th>ユメステ</th>
-                    <td>親指勢 23年7月～ レート940↑ 星章30%↑ <br> 推し: 新妻八恵、流石知冴、千寿いろは、白丸美兎</td>
+                    <td>親指勢 23年7月～ レート950↑ 星章30%↑ <br> 推し: 新妻八恵、流石知冴、千寿いろは、白丸美兎</td>
                 </tr>
             </table>
         </div>
