@@ -4,7 +4,6 @@
     }
 }
 
-
 /* 共通スタイル */
 body {
     line-height: 200%;
@@ -18,7 +17,6 @@ a {
     text-decoration: none;
 }
 
-
 /* ヘッダー */
 .header {
     text-align: center;
@@ -31,12 +29,18 @@ a {
     color: #333;
 }
 
+.header-icon {
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
 
 /* モード切り替えボタン */
 .switch-button {
-    position: absolute; /* 絶対配置 */
-    top: 10px; /* 上から10px */
-    right: 10px; /* 右から10px */
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
     align-items: center;
 }
@@ -49,30 +53,38 @@ a {
     color: #333;
 }
 
-
 /* SNS */
 .sns {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 15px;
     background-color: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    flex-wrap: wrap;
-    max-width: 100%;
+    text-align: left;
+    width: auto;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 
-.sns a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: inherit;
-    text-align: center;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin: 10px;
+.sns-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sns-table td:first-child {
+    padding-right: 1px;
+}
+
+.sns-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sns-table tr:last-child th, .sns-table tr:last-child td {
+    border-bottom: none;
 }
 
 /* SNSアイコン */
@@ -108,11 +120,15 @@ a {
     color: #333;
 }
 
-
 /* 詳細情報 */
 .info {
     margin-top: 10px;
     padding: 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
 }
 
 .info-table {
@@ -130,11 +146,9 @@ a {
     background-color: #f5f5f5;
 }
 
-/* 最後のテーブルセルのボーダースタイル */
 .info-table tr:last-child th, .info-table tr:last-child td {
     border-bottom: none;
 }
-
 
 /* ダークモードスタイル */
 body.dark-mode, .header.dark-mode, .sns.dark-mode, .info.dark-mode {
@@ -163,8 +177,25 @@ body.dark-mode a {
     border-color: #555;
 }
 
-.dark-mode .sns a {
-    color: #f5f5f5;
+.dark-mode .sns-table th, .dark-mode .sns-table td {
+    border-color: #555;
+}
+
+.dark-mode .info-sns th {
+    background-color: #222222;
+}
+
+.dark-mode .info {
+    background-color: #222222;
+    border-color: #555;
+}
+
+.dark-mode .info-table th, .dark-mode .info-table td {
+    border-color: #555;
+}
+
+.dark-mode .info-table th {
+    background-color: #222222;
 }
 
 .dark-mode .sns i.fa-twitter {
@@ -187,20 +218,6 @@ body.dark-mode a {
     color: #f5f5f5;
 }
 
-.dark-mode .info {
-    background-color: #222222;
-    border-color: #555;
-}
-
-.dark-mode .info-table th, .dark-mode .info-table td {
-    border-color: #555;
-}
-
-.dark-mode .info-table th {
-    background-color: #222222;
-}
-
-
 /* アクセスカウンター */
 .access-counter {
     margin-top: 20px;
@@ -220,7 +237,6 @@ body.dark-mode a {
     background-color: #222222;
     color: #f5f5f5;
 }
-
 
 /* Now Playing */
 #now-playing-container {
