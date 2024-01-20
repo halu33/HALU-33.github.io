@@ -6,28 +6,21 @@ use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
 
 ini_set('display_errors', 0);
-session_start();
 
-// ログイン確認
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header('Location: login.php');
-    exit;
-}
-
-// データベース接続
+// DB接続
 function getDatabaseConnection() {
     return new PDO(DB_DSN, DB_USER, DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 }
 
-// すべてのトークンを取得する関数
+// トークン取得
 function getAllTokensFromDB($pdo) {
     $stmt = $pdo->query("SELECT access_token, refresh_token FROM spotify_tokens");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-// トークンをリフレッシュする関数
+// リフレッシュ
 function refreshToken($session, $pdo, $refreshToken) {
     $session->refreshAccessToken($refreshToken);
     $newAccessToken = $session->getAccessToken();
@@ -53,7 +46,7 @@ $session = new Session(
 
 $api = new SpotifyWebAPI();
 
-// 全てのトークンを試す
+// トークンチェック
 foreach ($tokens as $token) {
     $session->setAccessToken($token['access_token']);
     $session->setRefreshToken($token['refresh_token']);
@@ -64,7 +57,7 @@ foreach ($tokens as $token) {
         $accessToken = $token['access_token']; // 有効なトークンを保存
         break;
     } catch (Exception $e) {
-        // 無効なトークンの場合、次のトークンを試す
+        // 無効なトークンの場合は次のトークンを試す
         $accessToken = refreshToken($session, $pdo, $token['refresh_token']);
         $api->setAccessToken($accessToken);
     }

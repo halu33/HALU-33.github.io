@@ -10,16 +10,15 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 
     if ($userid === ADMIN_USER && password_verify($password, ADMIN_PASSWORD_HASH)) {
-        // 認証成功
         $_SESSION['logged_in'] = true;
-        header('Location: SpotifyAPI_Authentication.php');
+        header('Location: SpotifyAuth.php');
         exit;
     } else {
-        // 認証失敗
         $error = 'miss';
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

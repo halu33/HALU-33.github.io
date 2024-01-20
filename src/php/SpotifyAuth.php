@@ -5,16 +5,13 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
 
-// セッション開始
-session_start();
-
 // ログイン
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header('Location: login.php');
     exit;
 }
 
-// トークンをデータベースに保存
+// トークンをDBに保存
 function saveTokenToDB($pdo, $accessToken, $refreshToken) {
     $stmt = $pdo->prepare("REPLACE INTO spotify_tokens (user_id, access_token, refresh_token) VALUES ('HALU_33', :access_token, :refresh_token)");
     $stmt->execute([
