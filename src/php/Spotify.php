@@ -6,49 +6,44 @@ use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
 
 ini_set('display_errors', 0);
-
 session_start();
 
-// データベース接続のための関数
+// ログイン確認
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: login.php');
+    exit;
+}
+
+// データベース接続
 function getDatabaseConnection() {
     return new PDO(DB_DSN, DB_USER, DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 }
 
-// トークンをリフレッシュする関数
-function refreshToken($session, $pdo) {
-    $stmt = $pdo->query("SELECT refresh_token FROM spotify_tokens WHERE user_id = 'your_user_id'");
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($row && $row['refresh_token']) {
-        $session->refreshAccessToken($row['refresh_token']);
-        $newAccessToken = $session->getAccessToken();
-        $newRefreshToken = $session->getRefreshToken();
-        $stmt = $pdo->prepare("UPDATE spotify_tokens SET access_token = :access_token, refresh_token = :refresh_token WHERE user_id = 'your_user_id'");
-        $stmt->execute([
-            ':access_token' => $newAccessToken,
-            ':refresh_token' => $newRefreshToken ?: $row['refresh_token']
-        ]);
-        return $newAccessToken;
-    }
-    return null;
+// すべてのトークンを取得する関数
+function getAllTokensFromDB($pdo) {
+    $stmt = $pdo->query("SELECT access_token, refresh_token FROM spotify_tokens");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-// アクセストークンの有効期限を確認し、必要に応じて更新
-function validateAccessToken($session, $pdo) {
-    if (isset($_SESSION['accesstoken'])) {
-        $api = new SpotifyWebAPI();
-        $api->setAccessToken($_SESSION['accesstoken']);
-        try {
-            $api->me();
-        } catch (Exception $e) {
-            return refreshToken($session, $pdo);
-        }
-        return $_SESSION['accesstoken'];
-    } else {
-        return refreshToken($session, $pdo);
-    }
+// トークンをリフレッシュする関数
+function refreshToken($session, $pdo, $refreshToken) {
+    $session->refreshAccessToken($refreshToken);
+    $newAccessToken = $session->getAccessToken();
+    $newRefreshToken = $session->getRefreshToken();
+
+    $stmt = $pdo->prepare("UPDATE spotify_tokens SET access_token = :access_token, refresh_token = :refresh_token WHERE refresh_token = :old_refresh_token");
+    $stmt->execute([
+        ':access_token' => $newAccessToken,
+        ':refresh_token' => $newRefreshToken ?: $refreshToken,
+        ':old_refresh_token' => $refreshToken
+    ]);
+    return $newAccessToken;
 }
+
+$pdo = getDatabaseConnection();
+$tokens = getAllTokensFromDB($pdo);
 
 $session = new Session(
     SPOTIFY_CLIENT_ID,
@@ -56,13 +51,26 @@ $session = new Session(
     CALLBACK_URL
 );
 
-$pdo = getDatabaseConnection();
+$api = new SpotifyWebAPI();
 
-$accessToken = validateAccessToken($session, $pdo);
+// 全てのトークンを試す
+foreach ($tokens as $token) {
+    $session->setAccessToken($token['access_token']);
+    $session->setRefreshToken($token['refresh_token']);
+
+    try {
+        $api->setAccessToken($token['access_token']);
+        $api->me(); // トークンが有効かどうかを確認
+        $accessToken = $token['access_token']; // 有効なトークンを保存
+        break;
+    } catch (Exception $e) {
+        // 無効なトークンの場合、次のトークンを試す
+        $accessToken = refreshToken($session, $pdo, $token['refresh_token']);
+        $api->setAccessToken($accessToken);
+    }
+}
 
 if ($accessToken) {
-    $api = new SpotifyWebAPI();
-    $api->setAccessToken($accessToken);
     $currentTrack = $api->getMyCurrentTrack();
     saveCurrentPlaying($currentTrack, $pdo);
 
@@ -74,19 +82,19 @@ if ($accessToken) {
     echo json_encode(['error' => 'Authentication required.']);
 }
 
-// 現在再生中の曲情報をデータベースに保存する関数
+// NowPlayingをDBに保存
 function saveCurrentPlaying($currentTrack, $pdo) {
     if ($currentTrack && isset($currentTrack->item)) {
         $stmt = $pdo->prepare("
-        INSERT INTO NowPlaying (track_name, artist_name, track_url, track_length, thumbnail_url)
-        VALUES (:track_name, :artist_name, :track_url, :track_length, :thumbnail_url)
-        ON DUPLICATE KEY UPDATE
-        track_name = VALUES(track_name),
-        artist_name = VALUES(artist_name),
-        track_url = VALUES(track_url),
-        track_length = VALUES(track_length),
-        thumbnail_url = VALUES(thumbnail_url),
-        last_played_at = NOW()
+            INSERT INTO NowPlaying (track_name, artist_name, track_url, track_length, thumbnail_url)
+            VALUES (:track_name, :artist_name, :track_url, :track_length, :thumbnail_url)
+            ON DUPLICATE KEY UPDATE
+            track_name = VALUES(track_name),
+            artist_name = VALUES(artist_name),
+            track_url = VALUES(track_url),
+            track_length = VALUES(track_length),
+            thumbnail_url = VALUES(thumbnail_url),
+            last_played_at = NOW()
         ");
         $stmt->execute([
             ':track_name' => $currentTrack->item->name,
@@ -97,4 +105,3 @@ function saveCurrentPlaying($currentTrack, $pdo) {
         ]);
     }
 }
-?>

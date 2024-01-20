@@ -26,4 +26,3 @@ $stmt = $pdo->prepare("SELECT SUM(count) AS total_count FROM visit_counts");
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $total_visitor_count = $row['total_count'];
-?>

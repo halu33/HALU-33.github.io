@@ -19,4 +19,3 @@ try {
     echo "データベースエラー: " . $e->getMessage();
     exit;
 }
-?>
