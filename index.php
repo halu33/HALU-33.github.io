@@ -40,11 +40,11 @@ include "./src/php/counter.php";
             <table class="sns-table">
                 <tr>
                     <td><a href="https://twitter.com/MK8DX_mkmg" target="_blank"><i class="fab fa-twitter"></i></a></td>
-                    <td><s>@HALU_33</s> → @MK8DX_mkmg ※アカウントが凍結されたためIDが変わりました</td>
+                    <td><s>@HALU_33</s> → @MK8DX_mkmg <br> ※アカウントが凍結されたためIDが変わりました</td>
                 </tr>
                 <tr>
                     <td><a href="https://discord.gg/UQMnbP85PB" target="_blank"><i class="fab fa-discord"></i></a></td>
-                    <td>username: <code>halu_33</code>      ※個人鯖では通話の他に（遊びで）botの開発等行ってます</td>
+                    <td>username: <code>halu_33</code> <br> ※個人鯖では通話の他に（遊びで）botの開発等行ってます</td>
                 </tr>
                 <tr>
                     <td><a href="https://www.youtube.com/c/HALU_33" target="_blank"><i class="fab fa-youtube"></i></a></td>
