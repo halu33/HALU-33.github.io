@@ -5,11 +5,17 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
 
-// ログイン
+// セッション開始
+session_start();
+
+// ログイン状態をチェック
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header('Location: login.php');
     exit;
 }
+
+// セッションをここで終了
+session_write_close();
 
 // トークンをDBに保存
 function saveTokenToDB($pdo, $accessToken, $refreshToken) {
