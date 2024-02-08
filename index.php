@@ -10,7 +10,7 @@ include "./src/php/counter.php";
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://halu33.net/MyProfile">
         <meta property="og:locale" content="ja_JP">
-        <link rel="stylesheet" href="./src/css/style.css?v=1"/>
+        <link rel="stylesheet" href="./src/css/style.css?v=7"/>
         <title>@HALU_33</title>
         <meta name="description" content="HALU_33 Profile">
         <link rel="icon" href="./img/epril_icon.png">
@@ -40,6 +40,10 @@ include "./src/php/counter.php";
             <table class="sns-table">
                 <tr>
                     <td><a href="https://twitter.com/HALU_33" target="_blank"><i class="fab fa-twitter"></i></a></td>
+                    <td>@HALU_33</td>
+                </tr>
+                <tr>
+                    <td><a href="https://misskey.io/@HALU_33" target="_blank"><img src="./img/misskey.png" alt="Misskey" class="sns-icon"></a></td>
                     <td>@HALU_33</td>
                 </tr>
                 <tr>
