@@ -39,8 +39,8 @@ include "./src/php/counter.php";
         <div class="sns">
             <table class="sns-table">
                 <tr>
-                    <td><a href="https://twitter.com/MK8DX_mkmg" target="_blank"><i class="fab fa-twitter"></i></a></td>
-                    <td><s>@HALU_33</s> → @MK8DX_mkmg <br> ※アカウントが凍結されたためIDが変わりました</td>
+                    <td><a href="https://twitter.com/HALU_33" target="_blank"><i class="fab fa-twitter"></i></a></td>
+                    <td>@HALU_33</td>
                 </tr>
                 <tr>
                     <td><a href="https://discord.gg/UQMnbP85PB" target="_blank"><i class="fab fa-discord"></i></a></td>
