@@ -39,28 +39,28 @@ include "./src/php/counter.php";
         <div class="sns">
             <table class="sns-table">
                 <tr>
-                    <td><a href="https://twitter.com/HALU_33" target="_blank"><i class="fab fa-twitter"></i></a></td>
-                    <td>@HALU_33</td>
+                    <td><a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a></td>
+                    <td><a href="https://twitter.com/HALU_33" target="_blank">@HALU_33</a></td>
                 </tr>
                 <tr>
-                    <td><a href="https://misskey.io/@HALU_33" target="_blank"><img src="./img/misskey.png" alt="Misskey" class="sns-icon"></a></td>
-                    <td>@HALU_33</td>
+                    <td><a href="https://misskey.io" target="_blank"><img src="./img/misskey.png" alt="Misskey" class="sns-icon"></a></td>
+                    <td><a href="https://misskey.io/@HALU_33" target="_blank">@HALU_33</a></td>
                 </tr>
                 <tr>
-                    <td><a href="https://discord.gg/UQMnbP85PB" target="_blank"><i class="fab fa-discord"></i></a></td>
-                    <td>username: <code>halu_33</code> <br> ※個人鯖では通話の他に（遊びで）botの開発等行ってます</td>
+                    <td><a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i></a></td>
+                    <td>username: <a href="https://discord.gg/UQMnbP85PB" target="_blank"><code>halu_33</code></a> <br> ※個人鯖では通話の他に（遊びで）botの開発等行ってます</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.youtube.com/c/HALU_33" target="_blank"><i class="fab fa-youtube"></i></a></td>
-                    <td>@HALU_33</td>
+                    <td><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></td>
+                    <td><a href="https://www.youtube.com/c/HALU_33" target="_blank">@HALU_33</a></td>
                 </tr>
                 <tr>
-                    <td><a href="https://open.spotify.com/user/i1l47xrnbi52fzlnbi8bw95f6?si=f22210590b4e477e&nd=1" target="_blank"><i class="fab fa-spotify"></i></a></td>
-                    <td>mna</a></td>
+                    <td><a href="https://open.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a></td>
+                    <td><a href="https://open.spotify.com/user/i1l47xrnbi52fzlnbi8bw95f6?si=f22210590b4e477e&nd=1" target="_blank">mna</a></td>
                 </tr>
                 <tr>
-                    <td><a href="https://github.com/halu33" target="_blank"><i class="fab fa-github"></i></a></td>
-                    <td>halu33</td>
+                    <td><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></td>
+                    <td><a href="https://github.com/halu33" target="_blank">halu33</a></td>
                 </tr>
             </table>
         </div>
@@ -86,7 +86,7 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>MK8DX</th>
-                    <td>所属:elf Code RL ill Iruca その他化石チーム<br>
+                    <td>所属:elf Code RL Iruca その他化石チーム<br>
                         150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">SenjuIroha</a>
                     </td>
                 </tr>
@@ -99,6 +99,10 @@ include "./src/php/counter.php";
                     <td>Name: 33<i class="fa-brands fa-apple"></i> Rank: 650↑ 段位: 25↑ 21年4月頃～<br>
                         推しキャラ: ヴィレータ、エプリル
                     </td>
+                </tr>
+                <tr>
+                    <th>アニメ</th>
+                    <td><a href="https://annict.com/@HALU_33/watched" target="_blank">Annict</a></td>
                 </tr>
             </table>
         </div>
