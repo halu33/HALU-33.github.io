@@ -48,7 +48,7 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <td><a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord"></i></a></td>
-                    <td>username: <a href="https://discord.gg/UQMnbP85PB" target="_blank"><code>halu_33</code></a> <br> ※個人鯖では通話の他に（遊びで）botの開発等行ってます</td>
+                    <td>username: <a href="https://discord.gg/UQMnbP85PB" target="_blank"><code>halu_33</code></a></td>
                 </tr>
                 <tr>
                     <td><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></td>
@@ -86,13 +86,13 @@ include "./src/php/counter.php";
                 </tr>
                 <tr>
                     <th>MK8DX</th>
-                    <td>所属:elf Code RL Iruca その他化石チーム<br>
+                    <td>所属:elf Code Iruca RL その他化石チーム<br>
                         150cc Lounge:<a href="https://www.mk8dx-lounge.com/PlayerDetails/10999" target="_blank">SenjuIroha</a>
                     </td>
                 </tr>
                 <tr>
                     <th>ユメステ</th>
-                    <td>親指勢 多指置きプレイ🔰 23年7月～ レート950↑ 星章30%↑ <br> 推し: 新妻八恵、千寿いろは、白丸美兎、流石知冴</td>
+                    <td>親指勢 多指置きプレイ🔰 23年7月～ レート950↑ 星章30%↑ <br> 新妻八恵推し / 7番目のエトワールをさがして 8位</td>
                 </tr>
                 <tr>
                     <th>白猫プロジェクト(故)</th>
